@@ -26,7 +26,7 @@ const Register = () => {
       setMessage('Registro exitoso');
       localStorage.setItem('username', formData.username);
       window.dispatchEvent(new Event('storage')); // Disparar evento de almacenamiento
-      navigate('/');
+      navigate('/login');
     } catch (error) {
       setMessage(error.response?.data?.error || 'Error en el registro');
     }
